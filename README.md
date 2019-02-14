@@ -1,0 +1,1 @@
+realize some js func
