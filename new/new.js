@@ -14,3 +14,5 @@ function myNew() {
   // 只返回对象 优先级: 构造函数返回 > 新创建
   return res instanceof Object ? res : obj;
 }
+
+module.exports = myNew;
