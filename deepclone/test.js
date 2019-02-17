@@ -1,4 +1,4 @@
-const {deepclone} = require('./deepclone');
+const { deepclone } = require('./deepclone');
 
 let test = {
   num: 1,
