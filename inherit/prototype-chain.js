@@ -19,7 +19,6 @@ Child.prototype.getArr = function() {
 
 // instance.__proto__ = Child.prototype
 let instance = new Child();
-
 instance.getAge(); // 10
 instance.getArr(); // [1, 2]
 
