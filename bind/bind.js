@@ -14,6 +14,7 @@ Function.prototype.myBind = function(ctx) {
   }
 
   // 修改原型，创建新对象防止this与fn浅拷贝
+  // Object.create创建新对象挂载到目标的__proto__上
   fn.prototype = Object.create(this.prototype);
 
   return fn;
