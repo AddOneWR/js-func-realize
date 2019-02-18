@@ -25,4 +25,5 @@ instance.getArr(); // [1, 2]
 instance.arr.push(3);
 let instance2 = new Child();
 instance2.getArr(); // [1, 2, 3]
+
 // 缺点： 父元素引用会被修改
