@@ -6,8 +6,8 @@ Function.prototype.myCall = function(ctx) {
   for(var i = 1, len = arguments.length; i < len; i++) {
     args.push('arguments[' + i + ']');
   }
-  var result = eval('ctx.fn(' + args +')');
+  var res = eval('ctx.fn(' + args +')');
 
   delete ctx.fn;
-  return result;
+  return res;
 }
