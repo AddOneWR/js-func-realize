@@ -17,7 +17,7 @@ function dlr(t) {
   var stack = [];
   var temp;
   if(t !== null) {
-    arr.push(t);
+    stack.push(t);
   }
   while(arr.length !== 0) {
     temp = stack.pop();
