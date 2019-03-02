@@ -4,6 +4,8 @@ let test = {
   num: 1,
   arr: [1, 2, 3],
   string: 'aaa',
+  null: null,
+  undefined: undefined,
   child: {
     childNum: 2,
     childArr: [
