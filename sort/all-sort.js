@@ -6,8 +6,9 @@ function permutate(str) {
     var left = str[0];
     var rest = str.slice(1);
     var preResult = permutate(rest);
+    console.log(preResult)
     for(var i = 0; i < preResult.length; i++) {
-      for(var j = 0; j < preResult[i].length; j++) {
+      for(var j = 0; j <= preResult[i].length; j++) {
         var tmp = preResult[i].slice(0, j) + left + preResult[i].slice(j);
         result.push(tmp);
       }
