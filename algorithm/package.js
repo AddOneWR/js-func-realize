@@ -1,23 +1,28 @@
 // 背包问题
 
-function packageMaxValue(weight, value, size) {
-  let dp = [];
-  let len = weight.length;
-  // 初始化重量为0
-  for(let i = 0 ; i < len ; i++) {
-    dp[0][i] = 0;
-  }
-  for(let w = 0 ; w <= size ; w++) {
-    dp[w] = [];
-    for(let j = 1 ; j < len ; j++) {
-      if(w < weight[j]) {
-        dp[w][j] = dp[w][j - 1];
-        continue;
-      }
-
-      dp[w][j] = Math.max(dp[w][j - 1], dp[w - weight[j] + value[j]]);
+function knapsack(weights, values, W){
+  var n = weights.length -1
+  var f = [[]]
+  for(var j = 0; j <= W; j++){
+    if(j < weights[0]){ //如果容量不能放下物品0的重量，那么价值为0
+      f[0][j] = 0
+    }else{ //否则等于物体0的价值
+      f[0][j] = values[0]
     }
   }
-
-  return dp;
+  for(var j = 0; j <= W; j++){
+    for(var i = 1; i <= n; i++ ){
+      if(!f[i]){ //创建新一行
+        f[i] = []
+      }
+      if(j < weights[i]){ //等于之前的最优值
+        f[i][j] = f[i-1][j]
+      }else{
+        f[i][j] = Math.max(f[i-1][j], f[i-1][j-weights[i]] + values[i]) 
+      }
+    }
+  }
+  return f[n][W]
 }
+var a = knapsack([2,2,6,5,4],[6,3,5,4,6],10)
+console.log(a)
