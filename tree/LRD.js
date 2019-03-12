@@ -19,11 +19,11 @@ function lrd(t) {
   while(stack.length !== 0) {
     temp = stack.pop();
     res.push(temp.value);
-    if(t.left) {
-      stack.push(t.left);
+    if(temp.left) {
+      stack.push(temp.left);
     }
-    if(t.right) {
-      stack.push(t.right);
+    if(temp.right) {
+      stack.push(temp.right);
     }
   }
 
