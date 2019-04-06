@@ -6,6 +6,8 @@ let test = {
   string: 'aaa',
   null: null,
   undefined: undefined,
+  reg: new RegExp('\\w+'),
+  func: function(num){ console.log(num); },
   child: {
     childNum: 2,
     childArr: [
