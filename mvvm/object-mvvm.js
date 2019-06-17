@@ -4,10 +4,8 @@ let data = {};
 
 Object.defineProperty(data, "value", {
   configurable: true,
-  get: function() {
-    return input.value;
-  },
-  set: function(value) {
+  get: () => input.value,
+  set: (value) => {
     input.value = value;
   }
 });
